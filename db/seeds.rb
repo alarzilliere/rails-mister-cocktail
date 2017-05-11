@@ -656,8 +656,8 @@ name: "Clamato juice"
 {
 name: "Sour mix"
 },
-name: "Apfelkorn"
 {
+name: "Apfelkorn"
 },
 {
 name: "Green Chartreuse"
@@ -823,6 +823,21 @@ name: "coconut milk"
 }
 ]
 
+puts 'Creating cocktails...'
 
+cocktails_attributes = [
+{
+name: "Sex on the beach"
+},
+{
+name: "Mojito"
+},
+{
+name: "The headshot"
+}
+]
+
+
+Cocktail.create!(cocktails_attributes)
 Ingredient.create!(ingredients_attributes)
 puts 'Finished!'
