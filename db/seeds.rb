@@ -656,8 +656,8 @@ name: "Clamato juice"
 {
 name: "Sour mix"
 },
-{
 name: "Apfelkorn"
+{
 },
 {
 name: "Green Chartreuse"
