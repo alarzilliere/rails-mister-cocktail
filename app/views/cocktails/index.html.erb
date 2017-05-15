@@ -1,10 +1,20 @@
-<h1>All my Cocktails</h1>
+<div class="container text-center">
+  <div class="row">
+    <h1>All my Cocktails</h1>
+    <div><%= link_to "Create a new cocktail", new_cocktail_path, class:"btn btn-primary" %></div>
 
-<% @cocktails.each do | cocktail | %>
-  <h2><%= link_to cocktail.name, cocktail_path(cocktail) %>
-  </h2>
+    <% @cocktails.each do | cocktail | %>
 
-  <% end %>
+    <div class="col-md-3">
+      <div class="card">
+      <h2><%= link_to cocktail.name, cocktail_path(cocktail) %>
+      </h2>
+      </div>
+    </div>
 
-  <h3><%= link_to "Create a new cocktail", new_cocktail_path %></h3>
+      <% end %>
+      </div>
 
+
+
+</div>

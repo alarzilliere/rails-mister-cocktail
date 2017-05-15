@@ -1,13 +1,16 @@
 <h1><%= @cocktail.name %></h1>
-  <% @cocktail.doses.each do |dose| %>
-<h2><%= dose.ingredient.name %>
-</h2>
-<h2><%= dose.description %></h2>
-<% end %>
 
+    <% @cocktail.doses.each do |dose| %>
+<div class="display-ingredients">
+  <div class="ingredient-card">
+    <h2><%= dose.ingredient.name %>
+    </h2>
 
-<p><%= link_to "back to my list", cocktails_path %></p>
-
+  <h2><%= dose.description %></h2>
+  <%= link_to "delete", dose_path(dose), method: :delete %>
+  <% end %>
+  </div>
+</div>
 <% @cocktail.doses.each do |dose| %>
 <h2><% dose.ingredient.name %> </h2>
 <h2><% dose.description %> </h2>
@@ -18,3 +21,5 @@
 <%= f.input :description %>
 <%= f.submit %>
 <% end %>
+
+<p><%= link_to "back to my list", root_path %></p>
